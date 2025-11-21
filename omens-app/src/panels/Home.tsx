@@ -19,7 +19,7 @@ const Home: React.FC<HomeProps> = ({ id, fetchedUser, go }) => {
               Привет, {fetchedUser.first_name}! 👋
             </Title>
             <Text weight="3" style={{ color: 'var(--vkui--color_text_secondary)' }}>
-              Выберите приметы, которые хотите узнать
+              Узнай, что готовит тебе будущее!
             </Text>
           </Div>
         )}
