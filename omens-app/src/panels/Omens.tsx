@@ -74,6 +74,19 @@ const Omens: React.FC<OmensProps> = ({ id, type, go }) => {
     fetchOmens();
     showBanner();
 
+    // Обработка кнопки "Назад" на Android
+    const handleBackButton = (e: any) => {
+      if (e.detail.type === 'VKWebAppViewRestore') {
+        go('home');
+      }
+    };
+
+    // Подписываемся на события VK Bridge
+    bridge.subscribe(handleBackButton);
+
+    // Включаем обработку свайпа назад
+    bridge.send('VKWebAppSetSwipeSettings', { history: true });
+
     return () => {
       bridge.send('VKWebAppHideBannerAd').catch(console.log);
     };
