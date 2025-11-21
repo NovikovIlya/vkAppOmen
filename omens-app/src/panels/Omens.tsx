@@ -163,14 +163,14 @@ const Omens: React.FC<OmensProps> = ({ id, type, go }) => {
       {error && (
         <Placeholder
           icon={<Icon56ErrorOutline />}
-          header="Ошибка загрузки"
+        
           action={
             <Button size="m" onClick={fetchOmens}>
               Попробовать снова
             </Button>
           }
         >
-          {error}
+         Произошла ошибка {error}
         </Placeholder>
       )}
 
