@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+/dist/
+/build/
+
+# Environment files
+.env*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Log files
+*.log
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+
+# Typescript cache
+*.tsbuildinfo
+
+# Optional npm cache
+.npm
+
+# Testing
+coverage/
+*.lcov
+
+# Temporary files
+tmp/
+temp/
